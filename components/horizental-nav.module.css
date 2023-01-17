@@ -1,0 +1,57 @@
+.button {
+    border-radius: 26px;
+    height: 100%;
+    /* width: 172%; */
+    background-color: #737373;
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.Link {
+    text-decoration: none;
+    float: left;
+    padding-left: 2%;
+    padding-top: 0.5%;
+    width: 8%;
+    height: 32%;
+}
+
+.container {
+    position: absolute;
+    width: 95%;
+    height: 90px;
+    margin-left: -0.4%;
+    margin-top: -0.4%;
+    background-color: #1f1f1f;
+    /* border: 1px solid red; */
+}
+
+.selects {
+    float: right;
+    /* border: 1px solid red; */
+    height: 30px;
+    width: 20%;
+    padding-top: 1%;
+}
+
+.select {
+    text-align: center;
+    position: relative;
+    right: 4%;
+    /* padding-right: 50%; */
+    background-color: #737373;
+    color: white;
+    float: right;
+    border-radius: 7px;
+    height: 300%;
+    width: 40%;
+}
+
+.p {
+    color: white;
+    padding-top: 1%;
+    padding-right: 10%;
+    float: right;
+}
+
