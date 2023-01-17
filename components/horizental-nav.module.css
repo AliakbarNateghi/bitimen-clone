@@ -18,11 +18,11 @@
 }
 
 .container {
-    position: absolute;
+    position: fixed;
     width: 95%;
-    height: 90px;
-    margin-left: -0.4%;
-    margin-top: -0.4%;
+    height: 10%;
+    left: 0%;
+    top: 0%;
     background-color: #1f1f1f;
     /* border: 1px solid red; */
 }
@@ -54,4 +54,13 @@
     padding-right: 10%;
     float: right;
 }
+
+/* .emptyNav {
+    position: absolute;
+    width: 95%;
+    height: 8%;
+    left: 0%;
+    top: 10%;
+    background-color: #808080;
+} */
 

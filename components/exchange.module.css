@@ -1,0 +1,9 @@
+.container {
+    position: fixed;
+    text-align: center;
+    border: 1px blue solid;
+    width: 23.75%;
+    height: 45%;
+    right: 5%;
+    top: 10%;
+}

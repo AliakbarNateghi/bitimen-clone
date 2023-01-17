@@ -1,0 +1,13 @@
+.container {
+    position: fixed;
+    text-align: center;
+    height: 45%;
+    width: 47.5%;
+    border: 1px solid yellow;
+    top: 10%;
+    right: 28.75%;
+}
+
+.chart {
+    
+}

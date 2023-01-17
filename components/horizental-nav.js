@@ -15,30 +15,35 @@ const HorizentalNav = () => {
 
 
     return (
-        <div className={styles.container}>
-            <p className={styles.p}>:بازارها</p>
-            <br />
-            <div className={styles.selects}>
+        <div>
+            <div className={styles.container}>
+                <p className={styles.p}>:بازارها</p>
+                <br />
+                <div className={styles.selects}>
 
-                <div>
-                    <select className={styles.select}>
-                        <option disabled selected hidden>USDT</option>
-                    </select>
+                    <div>
+                        <select className={styles.select}>
+                            <option disabled selected hidden>USDT</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select className={styles.select} style={{right: '30px'}}>
+                            <option disabled selected hidden>تومان</option>
+                        </select>
+                    </div>
+
                 </div>
-
-                <div>
-                    <select className={styles.select} style={{right: '30px'}}>
-                        <option disabled selected hidden>تومان</option>
-                    </select>
-                </div>
-
+                
+                
+                <Link href="#" className={styles.Link}>
+                    <div className={styles.button}>ورود/ثبت نام</div>
+                </Link>   
+                
             </div>
-            
-            
-            <Link href="#" className={styles.Link}>
-                <div className={styles.button}>ورود/ثبت نام</div>
-            </Link>   
-            
+
+
+            {/* <div className={styles.emptyNav}></div> */}
         </div>
     )
 }

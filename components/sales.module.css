@@ -1,0 +1,11 @@
+.container {
+    position: fixed;
+    text-align: center;
+    border: 1px solid red;
+    width: 23.75%;
+    height: 45%;
+    right: 76.25%;
+    top: 10%;
+    overflow: scroll;
+}
+

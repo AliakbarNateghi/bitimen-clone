@@ -1,13 +1,11 @@
-.label {
-    display: inline-block;
-}
-
 .container {
     position: fixed;
     text-align: center;
-    border: 1px red solid;
+    border: 1px solid red;
     width: 23.75%;
     height: 45%;
-    right: 52.5%;
+    right: 76.25%;
     top: 55%;
+    overflow: scroll;
 }
+                       

@@ -32,8 +32,8 @@ const Sell = ({prop}) => {
 
     if (ordinarySale === true) {
         return (
-            <div>
-                <br /><br />
+            <div className={styles.container}>
+                
                 <p>خرید بیت کوین</p>
                 <br />
                 <button onClick={ordinarySaleFunc}>سفارش عادی</button>
@@ -55,15 +55,13 @@ const Sell = ({prop}) => {
 
                 <input type='range' defaultValue='0' min='0' max='100'/>
 
-                <br /><br />
+                <br />
 
                 <p>{singleCost*quantity}:(IRT)مبلغ کل سفارش</p>
 
-                <br />
 
                 <p>{quantity}:(BTC)دریافتی شما</p>
 
-                <br />
 
                 <p>۰:(BTC)کارمزد</p>
 
@@ -77,8 +75,7 @@ const Sell = ({prop}) => {
         )
     } else {
         return (
-            <div>
-                <br /><br />
+            <div className={styles.container}>
                 <p>خرید بیت کوین</p>
                 <br />
                 <button onClick={ordinarySaleFunc}>سفارش عادی</button>
@@ -100,15 +97,13 @@ const Sell = ({prop}) => {
 
                 <input type='range' defaultValue='0' min='0' max='100'/>
 
-                <br /><br />
+                <br />
 
                 <p>{prop*quantity}:(IRT)مبلغ کل سفارش</p>
 
-                <br />
 
                 <p>{quantity}:(BTC)دریافتی شما</p>
 
-                <br />
 
                 <p>۰:(BTC)کارمزد</p>
 
