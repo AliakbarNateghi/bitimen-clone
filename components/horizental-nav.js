@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 // import { FormControl, Nav } from "react-bootstrap";
 import Link from "next/link";
 import styles from "./horizental-nav.module.css";
@@ -12,6 +13,30 @@ const HorizentalNav = () => {
     //     { value: 'strawberry', label: 'Strawberry' },
     //     { value: 'vanilla', label: 'Vanilla' },
     // ];
+
+    // const [lastPrice, setLastPrice] = useState(0);
+
+    // const fetchData = async () => {
+    //     try {
+    //         const lastPrice = await axios.get('https://cex.io/api/last_prices/BTC/USD', {
+                
+    //         });
+
+    //         if (lastPrice.status === 200) {
+    //             setLastPrice(lastPrice.data)
+    //         } else {
+    //             alert('fetching last price data went wrong!!!');
+    //         }
+    //     } catch (err) {
+    //         console.log('err :', err);
+    //     }
+    // }
+
+    // console.log('lastPrice :', lastPrice);
+
+    // useEffect(() => {
+    //     fetchData();
+    // }, []);
 
 
     return (
@@ -29,7 +54,7 @@ const HorizentalNav = () => {
 
                     <div>
                         <select className={styles.select} style={{right: '30px'}}>
-                            <option disabled selected hidden>تومان</option>
+                            <option disabled selected hidden>دلار</option>
                         </select>
                     </div>
 

@@ -1,7 +1,6 @@
 .button {
     border-radius: 26px;
     height: 100%;
-    /* width: 172%; */
     background-color: #737373;
     color: white;
     text-align: center;
@@ -18,18 +17,17 @@
 }
 
 .container {
+    border: 2px solid black;
     position: fixed;
     width: 95%;
     height: 10%;
     left: 0%;
     top: 0%;
     background-color: #1f1f1f;
-    /* border: 1px solid red; */
 }
 
 .selects {
     float: right;
-    /* border: 1px solid red; */
     height: 30px;
     width: 20%;
     padding-top: 1%;
@@ -39,7 +37,6 @@
     text-align: center;
     position: relative;
     right: 4%;
-    /* padding-right: 50%; */
     background-color: #737373;
     color: white;
     float: right;

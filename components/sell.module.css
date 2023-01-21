@@ -1,14 +1,83 @@
-.label {
-    display: inline-block;
-}
-
 .container {
     position: fixed;
     float:right;
     text-align: center;
-    border: 1px red solid;
+    border: 2px solid black;
     width: 23.75%;
     height: 50%;
     right: 28.75%;
     top: 55%;
+    background-color: #404040;
+    /* overflow: scroll; */
+}
+
+.label {
+    display: inline-block;
+    color: white;
+    width: 40%;
+}
+
+.header {
+    padding-top: 0.5%;
+    background-color: green;
+}
+
+.ph {
+    padding-button: 50%;
+    color: white;
+}
+
+.p {
+    padding-button: 50%;
+    color: white;
+    /* float: right; */
+    /* font-size: 10px; */
+}
+
+.button {
+    border-radius: 20px;
+    height: 35px;
+    width: 110px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    transition: color 100ms;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-size: 15px;
+    border-style: solid;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+.parentInput {
+    position: fixed;
+    right: 32%;
+    height: 4%;
+    width: 19%;
+    background-color: #4d4d4d;
+}
+
+.childInput {
+    height: 80%;
+    background-color: lightgray;
+}
+
+.loginButton {
+    border-radius: 20px;
+    height: 35px;
+    width: 110px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    transition: color 100ms;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-size: 15px;
+    border-style: solid;
+    background-color: green;
+    border: green;
+    color: white;
 }

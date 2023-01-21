@@ -3,7 +3,7 @@ import styles from "./buy.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Buy = () => {
+const Buy = ({prop}) => {
 
     const [ordinarySale, setOrdinarySale] = useState(true);
     const [bestBuyOffer, setBestBuyOffer] = useState(0);
@@ -32,23 +32,33 @@ const Buy = () => {
     if (ordinarySale === true) {
         return (
             <div className={styles.container}>
-                
-                <p>فروش بیت کوین</p>
-                <br />
-                <button onClick={ordinarySaleFunc}>سفارش عادی</button>
-
-                <button onClick={urgentSaleFunc}>سفارش فوری</button>
-                <br />
-                <p>۰:(IRT)موجودی</p>
-                <p>{bestBuyOffer}:بهترین پیشنهاد برای خرید</p>
-                <div>
-                    <label className={styles.label}>(IRT)قیمت واحد</label>
-                    <input type='number' min='0' onChange={(e) => setSingleCost(e.target.value)}/>
+                <div className={styles.header}>
+                    <p className={styles.ph}>فروش بیت کوین</p>
                 </div>
+                
+                <button style={{backgroundColor: ordinarySale === true ? '#999900' : '#ffff00',
+                                border: ordinarySale === true ? '#999900' : '#ffff00' }} 
+                                className={styles.button} 
+                                onClick={ordinarySaleFunc}>سفارش عادی</button>
+
+                <button style={{backgroundColor: ordinarySale === true ? '#ffff00' : '#999900', 
+                                border: ordinarySale === true ? '#999900' : '#ffff00'}} 
+                                className={styles.button} 
+                                onClick={urgentSaleFunc}>سفارش فوری</button>
+
                 <br />
-                <div>
+
+                <p className={styles.p}>۰:(USD)موجودی</p>
+                <p className={styles.p}>{bestBuyOffer}:بهترین پیشنهاد برای خرید</p>
+                
+                <div className={styles.parentInput}>
+                    <input className={styles.childInput} type='number' min='0' onChange={(e) => setSingleCost(e.target.value)}/>
+                    <label className={styles.label}>(USD)قیمت واحد</label>
+                </div>
+                <br /><br /><br />
+                <div className={styles.parentInput}>
+                    <input className={styles.childInput} type='number' min='0' onChange={(e) => setQuantity(e.target.value)}/>
                     <label className={styles.label}>(BTC)مقدار</label>
-                    <input type='number' min='0' onChange={(e) => setQuantity(e.target.value)}/>
                 </div>
                 <br />
 
@@ -56,18 +66,17 @@ const Buy = () => {
 
                 <br />
 
-                <p>{singleCost*quantity}:(IRT)مبلغ کل سفارش</p>
+                <p className={styles.p}>{singleCost*quantity}:(IRT)مبلغ کل سفارش</p>
 
 
-                <p>{quantity}:(BTC)دریافتی شما</p>
+                <p className={styles.p}>{quantity}:(BTC)دریافتی شما</p>
 
 
-                <p>۰:(BTC)کارمزد</p>
+                <p className={styles.p}>۰:(BTC)کارمزد</p>
 
-                <br />
 
                 <Link href="#" className={styles.Link}>
-                    <div className={styles.button}>وارد شوید</div>
+                    <button className={styles.loginButton}>وارد شوید</button>
                 </Link>   
 
             </div>
@@ -75,22 +84,32 @@ const Buy = () => {
     } else {
         return (
             <div className={styles.container}>
-                <p>فروش بیت کوین</p>
-                <br />
-                <button onClick={ordinarySaleFunc}>سفارش عادی</button>
-
-                <button onClick={urgentSaleFunc}>سفارش فوری</button>
-                <br />
-                <p>۰:(IRT)موجودی</p>
-                <p>{bestBuyOffer}:بهترین پیشنهاد برای خرید</p>
-                <div>
-                    <label className={styles.label}>(IRT)قیمت واحد</label>
-                    <input type='number' min='0' placeholder="قیمت بازار" disabled/>
+                <div className={styles.header}>
+                    <p className={styles.ph}>فروش بیت کوین</p>
                 </div>
+
+                <button style={{backgroundColor: ordinarySale === true ? '#999900' : '#ffff00',
+                                border: ordinarySale === true ? '#999900' : '#ffff00' }} 
+                                className={styles.button} 
+                                onClick={ordinarySaleFunc}>سفارش عادی</button>
+
+                <button style={{backgroundColor: ordinarySale === true ? '#ffff00' : '#999900', 
+                                border: ordinarySale === true ? '#999900' : '#ffff00'}} 
+                                className={styles.button} 
+                                onClick={urgentSaleFunc}>سفارش فوری</button>
+
                 <br />
-                <div>
+
+                <p className={styles.p}>۰:(USD)موجودی</p>
+                <p className={styles.p}>{bestBuyOffer}:بهترین پیشنهاد برای خرید</p>
+                <div className={styles.parentInput}>
+                    <input className={styles.childInput} type='number' min='0' placeholder="قیمت بازار" disabled/>
+                    <label className={styles.label}>(USD)قیمت واحد</label>
+                </div>
+                <br /><br /><br />
+                <div className={styles.parentInput}>
+                    <input className={styles.childInput} type='number' min='0' onChange={(e) => setQuantity(e.target.value)}/>
                     <label className={styles.label}>مبلغ کل معامله</label>
-                    <input type='number' min='0' onChange={(e) => setQuantity(e.target.value)}/>
                 </div>
                 <br />
 
@@ -98,24 +117,27 @@ const Buy = () => {
 
                 <br />
 
-                <p>{prop*quantity}:(IRT)مبلغ کل سفارش</p>
+                <p className={styles.p}>{prop*quantity}:(IRT)مبلغ کل سفارش</p>
 
 
-                <p>{quantity}:(BTC)دریافتی شما</p>
+                <p className={styles.p}>{quantity}:(BTC)دریافتی شما</p>
 
 
-                <p>۰:(BTC)کارمزد</p>
+                <p className={styles.p}>۰:(BTC)کارمزد</p>
 
-                <br />
 
                 <Link href="#" className={styles.Link}>
-                    <div className={styles.button}>وارد شوید</div>
+                    <button className={styles.loginButton}>وارد شوید</button>
                 </Link>   
 
             </div>
         )
     }
 
+}
+
+Buy.defaultProps = {
+    prop : 0
 }
 
 export default Buy

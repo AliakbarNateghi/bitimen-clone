@@ -1,9 +1,40 @@
 .container {
+    border: 2px solid black;
     position: fixed;
     text-align: center;
-    border: 1px blue solid;
     width: 23.75%;
     height: 45%;
     right: 5%;
     top: 10%;
+    background-color: #404040;
+}
+
+.p {
+    color: white;
+}
+
+.usd {
+    position: fixed;
+    right: 7%;
+    top: 15%;
+}
+
+.bitcoin {
+    position: fixed;
+    right: 23%;
+    top: 15%;
+}
+
+.span {
+    position: fixed;
+    right: 16%;
+    top: 15%;
+    font-size: 50px;
+    color: white;
+}
+
+.lastPrice {
+    position: fixed;
+    right: 16%;
+    top: 30%;
 }
